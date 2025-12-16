@@ -139,7 +139,7 @@ If you use this code, please cite the following works:
 - Proceedings of the National Academy of Sciences, **121**, e2313023120 (2024)  
   https://doi.org/10.1073/pnas.2313023120
 
-- ACS Catalysis, **14**, 14652–14664 (2024)
+- ACS Catalysis, **14**, 14652–14664 (2024) <br>
   https://doi.org/10.1021/acscatal.4c01920
 
 
