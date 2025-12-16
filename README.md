@@ -16,7 +16,8 @@
 - SchNetPack v1.0 (https://github.com/atomistic-machine-learning/SchNet)
 
 ### SchNetPack installation tip
-Install in in a conda enviroment and version 1.0 from the link given above. (This will not work with other higher versions)
+Install version **1.0** in a Conda environment using the link provided above.  
+⚠️ Note: This software is **not compatible with versions higher than 1.0**.
 
 ### Install
 
@@ -59,8 +60,10 @@ cp2k_density/ <br>
 │   ├── cp2k.inp <br>
 │   └── job.pbs <br>
 
-CP2K jobs are not submitted automatically.
-Submit manually from each set_XXX directory. Once the cp2k jobs have complete you can move to the second step and verify that everything is fine.
+CP2K jobs are **not submitted automatically**.  
+Please submit the jobs **manually from each `set_XXX` directory**.
+
+After all CP2K jobs have completed successfully, verify that everything is correct and then proceed to the second step.
 
 ## STEP 2 — Bader Charge Analysis
 Run Bader analysis on CP2K electron density cube files.
@@ -74,7 +77,10 @@ bader2ml bader run --density-dir cp2k_density --nprocs 8
 - Interactive-node friendly
 - Optional overwrite
 
-Suggestion: Use interactive node to do the Bader charge analysis. Set the value of nprocs to high number depending upon the number of CPUs you have on your interactive node. (number of nprocs = no of parrallel Bader charge calculations) Lets say you have total 100 frames and you set nprocs to 10 then this script will run 10 jobs at a time. And once all the calculation have completed go to the next step.
+**Suggestion:** Run the Bader charge analysis on an interactive node.  
+Choose `nprocs` based on the available CPUs, as it controls the number of parallel Bader calculations.  
+For instance, with 100 frames and `nprocs = 10`, the script executes 10 jobs concurrently.  
+Proceed to the next step after all calculations finish.
 
 ## STEP 3 — Combine ACF.dat → EXTXYZ
 Combine Bader charges (ACF.dat) and atomic coordinates into a single multi-frame EXTXYZ file.
