@@ -13,7 +13,6 @@
 
 - Python ≥ 3.5
 - CP2K (external)
-- Bader executable (Henkelman group)
 - SchNetPack v1.0 (https://github.com/atomistic-machine-learning/SchNet)
 
 ### SchNetPack installation tip
@@ -130,6 +129,18 @@ LAMMPS Trjectory. (Do not use trajectory saved using VMD)
 ### Output
 EXTXYZ trajectory with net_charges and bader_charges. The dynamic atomic charges can we visualized in OVITO visualization software.
 
+## Citations
+
+If you use this code, please cite the following works:
+
+- Journal of Chemical Physics, **163**, 214715 (2025)  
+  https://doi.org/10.1063/5.0287822
+
+- Proceedings of the National Academy of Sciences, **121**, e2313023120 (2024)  
+  https://doi.org/10.1073/pnas.2313023120
+
+- ACS Catalysis, **14**, 14652–14664 (2024)
+  https://doi.org/10.1021/acscatal.4c01920
 
 
 
