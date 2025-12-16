@@ -45,12 +45,12 @@ bader2ml cp2k prepare --xyz input.xyz --cp2k-inp template.inp --pbs-template cp2
 - Names PBS jobs according to set ID
 
 Make sure that your cp2k input file has this block:
-&PRINT
-  &E_DENSITY_CUBE
-       FILENAME valence_density
-       STRIDE 1
-  &END E_DENSITY_CUBE
-&END PRINT
+&PRINT <br>
+  &E_DENSITY_CUBE <br>
+       FILENAME valence_density <br>
+       STRIDE 1 <br>
+  &END E_DENSITY_CUBE <br>
+&END PRINT <br>
 
 ### Output
 cp2k_density/ <br>
