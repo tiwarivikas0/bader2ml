@@ -74,6 +74,13 @@ cp2k_density/ <br>
 CP2K jobs are **not submitted automatically**.  
 Please submit the jobs **manually from each `set_XXX` directory**.
 
+One-liner to submit all jobs (from cp2k_density):
+
+```bash
+for d in set_*; do (cd "$d" && qsub pbs.sh); done
+```
+Change pbs.sh to your pbs script name.
+
 After all CP2K jobs have completed successfully, verify that everything is correct and then proceed to the second step.
 
 ## STEP 2 — Bader Charge Analysis
