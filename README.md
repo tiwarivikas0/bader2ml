@@ -15,11 +15,22 @@
 - CP2K (external)
 - SchNetPack v1.0 (https://github.com/atomistic-machine-learning/SchNet)
 
-### SchNetPack installation tip
-Install version **1.0** in a Conda environment using the link provided above.  
-⚠️ Note: This software is **not compatible with versions higher than 1.0**.
+### SchNetPack installation using conda and pip
+⚠️ Note: This package is **not compatible with versions higher than 1.0**.
 
-### Install
+```bash
+conda activate
+conda create -n schnetv1 python=3.8
+conda activate schnetv1
+pip install schnetpack==1.0.0
+```
+Verify installation:
+
+```bash
+python -c "import importlib.metadata as m; print(m.version('schnetpack'))"
+```
+
+### Bader2ml Installation
 
 ```bash
 git clone https://github.com/tiwarivikas0/bader2ml.git
