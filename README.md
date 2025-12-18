@@ -44,7 +44,7 @@ pip install -e .
 bader2ml --help
 ```
 ## STEP 1 — CP2K Electron Density Preparation
-Prepare CP2K input files from a multi-frame XYZ trajectory.
+Prepare CP2K input files from a multi-frame XYZ trajectory. (**Note:** Keep number of frames around 500-1200)
 
 ```bash
 bader2ml cp2k prepare --xyz input.xyz --cp2k-inp template.inp --pbs-template cp2k.pbs --frames-per-set 100
@@ -55,7 +55,7 @@ bader2ml cp2k prepare --xyz input.xyz --cp2k-inp template.inp --pbs-template cp2
 - Extracts the first frame for COORD_FILE_NAME
 - Names PBS jobs according to set ID
 
-Make sure that your cp2k input file has this block:
+Make sure that your cp2k input file has this block inside the **&DFT block**:
 &PRINT <br>
   &E_DENSITY_CUBE <br>
        FILENAME valence_density <br>
