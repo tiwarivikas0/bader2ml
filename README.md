@@ -11,7 +11,7 @@
 
 ### Requirements
 
-- Python ≥ 3.5
+- Python ≥ 3.6
 - CP2K (external)
 - SchNetPack v1.0 (https://github.com/atomistic-machine-learning/SchNet)
 
