@@ -132,7 +132,7 @@ bader2ml data prepare-dataset
 Train a SchNet model to predict atomic charges.
 
 ```bash
-bader2ml train charges --db schnet_db --epochs 1000
+bader2ml train charges --db schnet_db
 ```
 
 ### Features
