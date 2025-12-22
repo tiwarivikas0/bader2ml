@@ -147,12 +147,12 @@ def parse_lattice_from_cp2k(inp_path: Path) -> str:
 
     return " ".join(f"{v[i]:.6f}" for v in (A,B,C) for i in range(3))
 
-def main():
+def main(argv=None):
     ap=argparse.ArgumentParser()
     ap.add_argument("--density-dir",default="cp2k_density")
     ap.add_argument("--out",default="charges.extxyz")
     ap.add_argument("--overwrite",action="store_true")
-    args=ap.parse_args()
+    args=ap.parse_args(argv)
 
     mode="w" if args.overwrite else "a"
     frames=0
