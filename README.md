@@ -23,7 +23,11 @@ conda activate
 conda create -n schnetv1 python=3.8
 conda activate schnetv1
 pip install schnetpack==1.0.0
+pip install "numpy==1.23.5"
 ```
+
+Do install numpy version 1.23.5 as the higher version of numpy is not compatible with the schnetpack version 1.0.0.
+
 Verify installation:
 
 ```bash
